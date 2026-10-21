@@ -1,0 +1,57 @@
+# Pronúncias aplicadas pelo speak antes de gerar o áudio (voz pt-PT).
+# O install.sh copia este ficheiro para ~/.config/speak/pronunciations.txt, que é o que se edita.
+# Formato:  termo = como dizer
+# "como dizer" é uma grafia aportuguesada ou fonemas IPA entre [[ ]] (espeak pt-PT).
+# O termo é procurado como palavra inteira, sem distinguir maiúsculas; termos com várias palavras têm prioridade.
+# As alterações valem logo na fala seguinte.
+
+Claude Code = Clóde Côude
+Claude = Clóde
+Anthropic = Antrópic
+Hugging Face = Râguin Fêice
+GitHub = Guíte-râbe
+KittenTTS = Quíten tê tê ésse
+Kokoro = Cocóro
+Piper = Páiper
+Windows = Uíndous
+Linux = Línucs
+WSL = dâbliu ésse éle
+Markdown = Márcdaune
+
+daemon = dímon
+daemons = dímons
+hook = húque
+hooks = húques
+cache = quéche
+script = scrípte
+scripts = scríptes
+skill = squíl
+skills = squíls
+prompt = prómpete
+prompts = prómpetes
+socket = sóquete
+torch = tórtche
+speak = spíque
+settings = sétingues
+session = séchon
+background = béquegraunde
+default = difólte
+venv = vê énve
+uv = u vê
+pip = pípe
+bash = béche
+shell = chél
+log = lógue
+logs = lógues
+bug = bâgue
+bugs = bâgues
+commit = comíte
+branch = bréntche
+merge = mârdje
+push = puche
+deploy = diplói
+pipeline = páiplaine
+plugin = plâguin
+browser = bráuzer
+JSON = djêisson
+WAV = uéive

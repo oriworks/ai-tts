@@ -1,0 +1,8 @@
+# ~/.config/speak/config.toml
+# Piper voice: a model in ~/.local/share/speak/voices. There is no default; pick one with
+# `speak --list [LANG]`, check its licence (MODEL_CARD) and run `speak --use NAME`, which sets this line.
+# voice = "pt_PT-tugão-medium"
+# Speech pace (Piper length_scale): higher is slower. `speak --rate X` updates this line.
+rate = 1.15
+# Pronunciation dictionary applied before synthesis (term = how to say it).
+pronunciations = "~/.config/speak/pronunciations.txt"
