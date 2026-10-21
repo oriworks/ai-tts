@@ -33,6 +33,14 @@ def is_prompt(entry):
     return any(b.get("type") == "text" for b in content or [])
 
 
+def says_something(command):
+    """A `speak` call that reads text aloud, not one that only changes settings (--auto, --stop...)."""
+    command = command.lstrip()
+    if not command.startswith("speak"):
+        return False
+    return not re.match(r"speak\s+--(auto|stop|start|rate|list|use|download|help)\b", command)
+
+
 def last_turn(transcript):
     """Return (final text of the last turn, whether the turn already called `speak`)."""
     entries = []
@@ -54,7 +62,7 @@ def last_turn(transcript):
         for b in reversed(d["message"].get("content") or []):
             if b.get("type") == "tool_use":
                 final_done = True
-                if b.get("name") == "Bash" and b.get("input", {}).get("command", "").lstrip().startswith("speak"):
+                if b.get("name") == "Bash" and says_something(b.get("input", {}).get("command", "")):
                     spoke = True
             elif b.get("type") == "text" and not final_done:
                 texts.append(b["text"])
